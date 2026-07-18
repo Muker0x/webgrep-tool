@@ -1,18 +1,22 @@
 import requests
+import re
 def scan_url(url,keyword):
     try:
         response = requests.get(url,timeout=5)
         text = response.text
         found = False
+        lines = text.split('\n')        
+        for line_num, line in enumerate(lines, 1):
+             #fixed keyword search, now shows only lines that actually contain it
+             if keyword.lower() in line.lower():
+                 found = True
+                 idx = line.lower().find(keyword.lower())
+                 # dont go below 0 or past the end of the line
+                 start = max(0, idx - 100)
+                 end = min(len(line), idx + 100)
+                 context = line[start:end].strip()
+                 print(f"  [Line {line_num}] ...{context}...")        
 
-        for line_num,line in enumerate(text.split("\n"),1):
-            if line.lower() in text.lower():
-                stripped = line.strip()
-                found = True 
-                if len(stripped) > 400:
-                    print(f"[{line_num}] {stripped[:200]}... (enumerated)")
-                else:
-                    print(f"[{line_num}] {stripped}")
 
         if not found:
             print(f"[-] keyword not found")
@@ -53,5 +57,4 @@ while True:
         continue
     elif ask != "y" or "n":
         ask=input ("Please choose correct input(y/n)")
-    
     
