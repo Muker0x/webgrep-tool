@@ -42,6 +42,6 @@ pip install requests
 Only use this on sites you have permission to test.
 
 ## Screenshot
-<img width="1920" height="1080" alt="Screenshot_2026-07-18_13_59_29" src="https://github.com/user-attachments/assets/4d666ea4-9d94-4076-b776-10f949b1009a" />
+<img width="1920" height="1080" alt="Screenshot_2026-07-18_14_10_07" src="https://github.com/user-attachments/assets/80927669-b9ff-4caa-9b28-ae1055c96beb" />
 
 
