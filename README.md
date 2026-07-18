@@ -37,7 +37,11 @@ Enter Target URL: http://testphp.vulnweb.com
 ```bash
 pip install requests
 ```
-
 ## Disclaimer
 
 Only use this on sites you have permission to test.
+
+## Screenshot
+<img width="1920" height="1080" alt="Screenshot_2026-07-18_13_59_29" src="https://github.com/user-attachments/assets/4d666ea4-9d94-4076-b776-10f949b1009a" />
+
+
