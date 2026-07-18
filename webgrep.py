@@ -22,7 +22,7 @@ def scan_url(url,keyword):
 while True:
 
     print("=== WebGrep - Source code scanner ===\n")
-    print("Snan mode: ")
+    print("Scan mode: ")
     print("[1] Single URL")
     print("[2] Multiple URLs")
     mode = input("\nChoose: ")
